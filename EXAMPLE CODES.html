@@ -1,0 +1,135 @@
+DATETIME PICKER
+
+
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+            });
+        </script>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NAVBAR
+
+Create an index.html, specify a <div class="container"> and leave this empty. Then use jQuery to load home.html into the .container object, and do the same for all other pages.
+
+
+$(document).ready(function() {
+    $(".container").load("home.html");
+});
+
+$("ul.navbar-nav li").each(function() {
+    $(this).on("click", function{
+        $(".container").load(($this).attr("data-page");
+    });
+});
+
+In this case, the href value of your URL should always be "#" and you should give it a data-page="about" if you want it to show the about page.
+
+
+
+
+Create all the divs in one page, give them a class that hides them, use jQuery to hide all divs BUT the one you want to show.
+
+<div class="container">
+    <div id="home"></div>
+    <div id="about" class="hidden"></div>
+    <div id="contact" class="hidden"></div>
+</div>
+Your JavaScript file:
+
+$("ul.navbar-nav li").each(function() {
+    $(this).on("click", function{
+        // Toggle classes of divs
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DROPDOWN
+
+
+Class   Description Example
+.dropdown               Indicates a dropdown menu  
+.dropdown-menu          Builds the dropdown menu   
+.dropdown-menu-right    Right-aligns a dropdown menu  
+.dropdown-header        Adds a header inside the dropdown menu  
+.dropup                 Indicates a dropup menu 
+.disabled               Disables an item in the dropdown menu 
+.divider                Separates items inside the dropdown menu with a horizontal line 
+
+http://www.w3schools.com/bootstrap/bootstrap_ref_comp_dropdowns.asp
+
+
+
+
+
+
+
+
+
+
+
+
+
